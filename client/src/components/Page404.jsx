@@ -36,7 +36,7 @@ export default function Page404() {
             sx={{ height: 260, mx: 'auto', my: { xs: 5, sm: 10 } }}
           />
 
-          <Button to={configData.LOGIN_URL} size="large" variant="contained" component={RouterLink}>
+          <Button id='goHomeButton'to={configData.LOGIN_URL} size="large" variant="contained" component={RouterLink}>
             Go to Home
           </Button>
 

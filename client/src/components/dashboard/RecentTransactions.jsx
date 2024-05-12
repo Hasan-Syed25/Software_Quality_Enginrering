@@ -9,31 +9,27 @@ import Loading from '../loading'
 
 
 export const RecentTransactions = () => {
-    const [loading, setLoading] = useState(true)
-    const [alert, setAlert] = useState(false)
-    const [alertMessage, setAlertMessage] = useState()
-    const [recentExp, setRecentExp] = useState()
-    const profile = JSON.parse(localStorage.getItem('profile'))
+    const [loading, setLoading] = useState(true);
+    const [alert, setAlert] = useState(false);
+    const [alertMessage, setAlertMessage] = useState();
+    const [recentExp, setRecentExp] = useState();
+    const profile = JSON.parse(localStorage.getItem('profile'));
+
     useEffect(() => {
         const getRecentExp = async () => {
-            setLoading(true)
-            const userIdJson = {
-                user: profile.emailId
-            }
-            const recent_exp = await getRecentUserExpService(userIdJson, setAlert, setAlertMessage)
-            recent_exp && setRecentExp(recent_exp?.data?.expense)
-            setLoading(false)
-
-        }
-        getRecentExp()
-
-
-    }, [])
+            setLoading(true);
+            const userIdJson = { user: profile.emailId };
+            const recent_exp = await getRecentUserExpService(userIdJson, setAlert, setAlertMessage);
+            recent_exp && setRecentExp(recent_exp?.data?.expense);
+            setLoading(false);
+        };
+        getRecentExp();
+    }, []);
 
     return (
         <>
         {loading ? <Loading/> : 
-        <Box sx={{
+        <Box data-testid="recent-transactions" sx={{
             boxShadow: 5,
             bgcolor: 'background.paper',
             borderRadius: 2,
@@ -43,8 +39,8 @@ export const RecentTransactions = () => {
                 Your Recent transactions,
             </Typography>
             {recentExp?.map(myExpense => (
-
                 <ExpenseCard
+                    data-testid="transaction-item"
                     key={myExpense?._id}
                     expenseId={myExpense?._id}
                     expenseName={myExpense?.expenseName}
@@ -57,5 +53,7 @@ export const RecentTransactions = () => {
             ))}
         </Box>}
         </>
-    )
+    );
 }
+
+
