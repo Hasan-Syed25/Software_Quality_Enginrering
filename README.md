@@ -72,7 +72,6 @@ ACCESS_TOKEN_SECRET=
 
 Please follow [This tutorial](https://dev.to/dalalrohit/how-to-connect-to-mongodb-atlas-using-node-js-k9i) to create your mongoDB connection url, which you'll use as your MONGODB_URI
 
-Provide some random key in ACCESS_TOKEN_SECRET or you could generate one using node enter the below command in the terminal to genrate a random secret key 
 
 ```
 node -e "console.log(require('crypto').randomBytes(256).toString('base64'));"
