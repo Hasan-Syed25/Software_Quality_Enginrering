@@ -2,7 +2,7 @@ const { createLogger, transports } = require('winston');
 const { assert } = require('chai');
 const sinon = require('sinon');
 
-const logger = require('./logger');
+const logger = require('../helper/logger');
 
 describe('Logger', () => {
     let sandbox;

@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { User, Group, Expense, Settlement } = require('./schema'); // assuming the schema is in a file called models.js
+const { User, Group, Expense, Settlement } = require('../model/schema'); // assuming the schema is in a file called models.js
 const { expect } = require('chai');
 
 describe('User Schema', () => {

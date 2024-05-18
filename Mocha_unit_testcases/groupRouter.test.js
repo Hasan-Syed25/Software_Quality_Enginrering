@@ -1,6 +1,6 @@
 const express = require('express');
 const request = require('supertest');
-const router = require('./groupRouter'); // assuming the router is in a file called router.js
+const router = require('../routes/groupRouter'); // assuming the router is in a file called router.js
 
 describe('Group Router', () => {
   let app;

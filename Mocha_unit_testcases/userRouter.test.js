@@ -1,6 +1,6 @@
 const express = require('express');
 const request = require('supertest');
-const router = require('./userRouter'); // assuming the router is in a file called router.js
+const router = require('../routes/userRouter'); // assuming the router is in a file called router.js
 const apiAuth = require('../helper/apiAuthentication');
 
 describe('User Router', () => {

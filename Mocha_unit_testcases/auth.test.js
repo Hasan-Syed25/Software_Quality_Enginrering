@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const sinon = require('sinon');
-const { generateAccessToken, validateToken, validateUser } = require('./apiAuthentication');
+const { generateAccessToken, validateToken, validateUser } = require('../helper/apiAuthentication');
 
 chai.use(chaiHttp);
 const expect = chai.expect;

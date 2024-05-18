@@ -1,8 +1,8 @@
 const { assert } = require('chai');
 const sinon = require('sinon');
 
-const logger = require('./logger');
-const requestLogger = require('./requestLogger');
+const logger = require('../helper/logger');
+const requestLogger = require('../helper/requestLogger');
 
 describe('Request Logger Middleware', () => {
     let sandbox;
