@@ -12,7 +12,7 @@ import useResponsive from '../../theme/hooks/useResponsive';
 
 // ----------------------------------------------------------------------
 
-export default function RegisterForm() {
+function RegisterForm() {
   const smUp = useResponsive('up', 'sm');
 
   const [showAlert, setShowAlert] = useState(false);
@@ -120,7 +120,7 @@ export default function RegisterForm() {
               error={Boolean(touched.password && errors.password)}
               helperText={touched.password && errors.password} />
 
-          <LoadingButton fullWidth size="large" type="submit" variant="contained" loading={isSubmitting}>
+          <LoadingButton data-testid="registerButton2" fullWidth size="large" type="submit" variant="contained" loading={isSubmitting}>
             Register
           </LoadingButton>
           </Stack>
@@ -139,4 +139,9 @@ export default function RegisterForm() {
         </Form>
       </FormikProvider></>
   );
+  
+
 }
+export default RegisterForm;
+
+
