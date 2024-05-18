@@ -74,7 +74,7 @@ Please follow [This tutorial](https://dev.to/dalalrohit/how-to-connect-to-mongod
 
 
 ```
-node -e "console.log(require('crypto').randomBytes(256).toString('base64'));"
+
 ```
 
 In the second terminal (*in the project root directory (back-end))
